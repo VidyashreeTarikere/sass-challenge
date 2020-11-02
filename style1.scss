@@ -1,0 +1,111 @@
+@import 'resets.scss';
+@import 'variables.scss';
+
+body {
+    font: 100% "Space Mono", monospace;
+    background-color: #000;
+    @include bodyimage;
+}
+    
+.red{
+    @include try($color1);
+}
+
+.b
+
+  
+  article {
+    display: flex;
+    flex-wrap: wrap;
+  
+      section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px silver solid;
+        @include box;
+        padding: $padding;
+        margin: $margin;
+        clear: both;
+        overflow: auto;
+    
+        #selling-points {
+            flex-grow: 2;
+            flex-basis: 100%;
+            }
+        }
+
+        pre {
+            background: #000;
+            border: 1px solid #ddd;
+            color: #666;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: $padding;
+            display: block;
+            white-space: pre-wrap;
+            
+    
+            class before {
+                float: left;
+                width: $width;
+            }
+  
+            class after {
+                float: right;
+                width: $width;
+            }
+        }
+    }    
+  
+    %shared {
+        color : #6b8eff;
+    }
+    
+  
+    h1 {
+        @extend %shared;
+        text-align: center;
+    }
+
+    h2{
+        @extend %shared;
+    }
+  
+    h6 {
+        @extend %shared;
+        text-align: center;
+        font-size: 2em;
+        padding: $padding * 2;
+        margin-bottom: 0px;
+    }
+  
+    %message-shared {
+        border: 1px solid #ccc;
+        padding: $padding;
+        margin: $margin;
+        color: #2748b3;
+    }
+        
+    .message {
+        @extend %message-shared;
+        background-color: #000;
+    }
+  
+    .success {
+        @extend %message-shared;
+        background-color: green;
+    }
+  
+    .error {
+        @extend %message-shared;
+        background-color: red;
+    }
+  
+    .warning {
+        @extend %message-shared;
+        background-color: orange;
+    }
